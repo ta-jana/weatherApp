@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="divWeatherMain" class="welcome-card">
+    <div [ngClass]="{'divWeatherMainSun' : sharedService.isCondition}">
+      <div [ngClass]="{'divWeatherMainNight' : !sharedService.isCondition}">
+    <ion-card-content>
+      <div class="weatherWidgetRow"><img src="{{sharedService.img}}"></div>
+      <div class="weatherWidgetRow">{{sharedService.cityName}}</div>
+      <div class="weatherWidgetRow">{{sharedService.condition}}</div>
+      <div class="weatherWidgetRow"><h4>{{sharedService.tempC}}°</h4></div>
+      <div class="weatherWidgetRow">Feels like: {{sharedService.feelsLikeC}}°</div>
+      <div class="weatherWidgetRow">Humidity: {{sharedService.humidity}} %</div>
+      <div class="weatherWidgetRow">Wind in kph: {{sharedService.wind_kph}}</div>
+      <div class="weatherWidgetRow">Wind degree: {{sharedService.wind_degree}} °</div>
+    </ion-card-content>
+      </div>
+    </div>
+    <ion-button [routerLink]="['/']" expand="block">Go back</ion-button>
+    </ion-card>
+
+
+  
+
+
+
+</ion-content>

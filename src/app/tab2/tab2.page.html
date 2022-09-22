@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      FORECAST
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="card">
+  </div>
+
+  <div [ngClass]="{'Tutorial1' : sharedService.wasBool}">
+    <ion-card>
+      <ion-card-content>
+        <ion-item>
+          <h1>Here you will se the forecast.</h1>
+        </ion-item>
+        <ion-button (click)="sharedService.RedirectToPage3()">Next</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>

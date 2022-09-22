@@ -1,0 +1,42 @@
+
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+    FAVORITE PLACES
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"> FAVORITE PLACES </ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <div [ngClass]="{'Tutorial1' : !sharedService.wasBool}">
+    <ion-card>
+      <ion-card-content>
+  <ion-button (click)="sharedService.printFavorites()" expand="block">Load weather for fav Cities</ion-button>
+</ion-card-content>
+</ion-card>
+
+  <ion-list>
+      <div class="favCity"></div>    
+  
+</ion-list> 
+  </div>
+
+<div [ngClass]="{'Tutorial1' : sharedService.wasBool}">
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <h1>Here you will see current weather in your saved favorite places.</h1>
+      </ion-item>
+      <ion-button (click)="sharedService.RedirectToPage1()">Next</ion-button>
+    </ion-card-content>
+  </ion-card>
+</div>
+
+</ion-content>

@@ -1,0 +1,27 @@
+.divWeatherMainNight{
+    display: block;
+    border-radius: 10px;
+    background:black;
+    background: linear-gradient(180deg,rgba(0,0,0,1) 0%, rgba(8,7,42,1)75%, rgb(8, 10, 63) 100%);
+    color: white;;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.divWeatherMainSun{
+    display: block;
+    border-radius: 10px;
+    background: rgb(25,178,205);
+    background: linear-gradient(0deg, rgba(25,178,205,1) 30%, rgba(46,78,245,1) 100%);
+    color: white;;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.weatherWidgetRow{
+    display:block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.Tutorial1{
+    display: none;
+}

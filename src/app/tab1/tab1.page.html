@@ -1,0 +1,66 @@
+<link
+  href="https://allfont.net/allfont.css?fonts=roboto-regular"
+  rel="stylesheet"
+  type="text/css"
+/>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> WEATHER APP </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [ngClass]="{'Tutorial1' : sharedService.wasBool}">
+    <ion-card>
+      <ion-card-content>
+        <ion-item>
+          <h1>
+            Hello! Welcome to Weather app. On this page you can search and save
+            your favorite places.
+          </h1>
+        </ion-item>
+        <ion-button (click)="sharedService.RedirectToPage2()">Next</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div [ngClass]="{'Tutorial1' : !sharedService.wasBool}">
+    <ion-card class="welcome-card">
+      <ion-card-content>
+        <!-- Input with placeholder -->
+        <ion-input
+          t
+          [(ngModel)]="sharedService.myInput"
+          placeholder="Enter city "
+        >
+        </ion-input>
+        <ion-button (click)="sharedService.btnSearchClicked()" expand="block"
+          >Search</ion-button
+        >
+        <ion-button (click)="sharedService.onBtnClickSave()" expand="block"
+          >Save</ion-button
+        >
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <div [ngClass]="{'divWeatherMainSun' : sharedService.isCondition}">
+        <div [ngClass]="{'divWeatherMainNight' : !sharedService.isCondition}">
+          <ion-card-content>
+            <div class="weatherWidgetRow">
+              <img class="image" src="{{sharedService.img}}" />
+            </div>
+            <div class="weatherWidgetRow">{{sharedService.cityName}}</div>
+            <div class="weatherWidgetRow">{{sharedService.tempC}}°</div>
+            <div class="weatherWidgetRow">
+              Feels like: {{sharedService.feelsLikeC}}°
+            </div>
+            <div class="weatherWidgetRow">{{sharedService.condition}}</div>
+          </ion-card-content>
+        </div>
+      </div>
+      <ion-button (click)="goToDetail()" expand="block"
+        >Go to detail</ion-button
+      >
+    </ion-card>
+  </div>
+</ion-content>
